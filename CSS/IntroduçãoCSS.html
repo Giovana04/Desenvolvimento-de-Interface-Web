@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução ao CSS</title>
+
+    <!--Fazer assim ou em arquivo separado
+    <style> 
+        p{
+            background-color: azure;
+            font-size: 24pt;
+            color: blueviolet;
+        }
+    </style>-->
+
+    <style>
+        p {
+            background-color: beige;
+        }
+
+        #paragrafo_especial {
+            font-size: 24pt;
+            color: brown;
+        }
+
+        .paragrafo{
+            font-size: 20pt;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!--ERRADO <p style="color: red; font-size: 30pt;">Texto</p> 
+    <p>parágrafo</p>-->
+
+    <p class="paragrafo">Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+    <p id="paragrafo_especial">Terceiro parágrafo</p>
+    <!--Funciona ter dois itens com o mesmo id, mas não é correto. O certo, e mais utilizado, é usar um "class"-->
+    <p class="paragrafo">Quarto parágrafo</p>
+</body>
+
+</html>
