@@ -29,6 +29,17 @@
             color: green;
             font-weight: bold;
         }
+
+        #paragrafo_teste{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 26pt;
+            font-style: italic;
+            font-weight: 700;
+            text-align: center; /*APENAS para texto*/
+            text-decoration: overline;
+            text-indent: 30pt; /*faz só na primeira linha*/
+            text-transform: uppercase; /*Tudo maiusculo*/
+        }
     </style>
     
 </head>
@@ -38,7 +49,7 @@
     <p>parágrafo</p>-->
 
     <p class="paragrafo">Primeiro parágrafo</p>
-    <p>Segundo parágrafo</p>
+    <p id="paragrafo_teste">Segundo</p>
     <p id="paragrafo_especial">Terceiro parágrafo</p>
     <!--Funciona ter dois itens com o mesmo id, mas não é correto. O certo, e mais utilizado, é usar um "class"-->
     <p class="paragrafo">Quarto parágrafo</p>
