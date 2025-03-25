@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando com Altura e Largura</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            background-color: aliceblue;
+            /*margin: 20px 30px 10px 35px;*/ /*entre um elemento e outro (fora do elemento)*/
+            padding: 20px 30px 10px 35px;
+            text-align: justify;
+        }
+
+        h1 {
+            background-color: bisque;
+            width: 700px;
+            height: 400px;
+            /* padding: 50px 100px;*/ /*50 é t/b e 100 é r/l (afastamento dos 4 cantos, dentro do elemento)*/
+            outline: 5px dotted blueviolet;/*fora do quadrado*/
+            /*centraliza, apesar de não ser muito utilizado*/
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: burlywood;
+            width: 700px;
+            height: 400px;
+            /*
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 35px; 
+            */
+            padding: 20px 30px 10px 35px;
+            /*border-width: 5px;
+            border-style: solid;
+            border-color: yellowgreen;*/
+            border: 5px dotted yellowgreen; /*dentro do quadrado*/
+            border-top: 50px solid black;
+
+        }
+
+        .destaque{
+            background-color: aquamarine;
+            font-size: 24px;
+        }
+
+        .tamanho{
+            width: 400px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Box Model</h1>
+    <h2>Largura e Altura</h2>
+    <p class="destaque">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque tamanho">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="tamanho">Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>
