@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira aula de CSS</title>
+
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf95JR784Z_NP8KYoPq4URx8L5LCag4NqfRw&s);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+        p{
+            padding: auto;
+        }
+
+        a:link{
+            color: #117fec;
+        }
+
+        a:visited{
+            color: rgba(13, 225, 13, 0.467);
+        }
+        
+        a:hover{
+            background-color: rgb(231, 192, 233);
+            font-size: 30pt;
+        }
+
+        #nome{
+            font-size: 28px;
+            font-weight: bold;
+            color: #0077cc;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        #curso{
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+        }
+
+        #Japa{
+            padding: 5px 10px;
+            border: 5px solid #0077cc;
+        }
+
+        .linha{
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        .secao-titulo{
+            color: #222;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 5px;
+        }
+
+        .texto{
+            font-size: 16px;
+            color: #444;
+        }
+
+        .contato-link{
+            font-style: italic;
+        }
+
+        .destaque{
+            background-color: rgb(232, 119, 67);
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        ol li{
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        ul li{
+            list-style-type: upper-roman;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1 id="nome">Giovana Fernandes Nascimento</h1>
+    <img src="imagens/gato terno.jpg" alt="Gatin de Terno">
+    <h3 id="curso">Cientista da Computação - 20 anos</h3>
+
+    <hr class="linha">
+
+    <h2 class="secao-titulo">Contato</h2>
+    <p class="texto">
+        Celular: <span class="destaque">(11) 96406-1331</span> <br>
+        Email: <a href="mailto:giovanafn0401@gmail.com" class="link contato-link">giovanafn0401@gmail.com</a>
+    </p>
+
+    <hr class="linha">
+
+    <h2 class="secao-titulo">Sobre</h2>
+    <p class="texto">
+        Lorem ipsum dolor sit amet, consectetur <span class="destaque">adipisicing elit</span>. Excepturi ipsam quos voluptates atque repellat.
+    </p>
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+    </ol>
+
+    <hr class="linha">
+
+    <h2 class="secao-titulo">Formação</h2>
+    <ol>
+        <li><strong>2023 </strong>- Faculdade de Ciência da Computação</li>
+        <li><strong>2024 </strong>- Curso Google de Fundamentos em Nuvem</li>
+        <li><strong>2023 </strong>- Curso Básico de Linguagem R</li>
+        <li><strong>2017</strong> - Curso <em ID = "Japa">Intermediário</em> de Japonês</li>
+    </ol>
+
+    <hr class="linha">
+
+    <h2 class="secao-titulo">Experiências</h2>
+    <ul>
+        <li><strong>2020 </strong>- Vendedora em Loja de Roupa Anca Modas</li>
+        <li><strong>2022 </strong>- Aprendiz em Setor Financeiro</li>
+        <li><strong>2023-2025 </strong>- Estágio de Assistência Técnica na <a href="https://www3.unicentro.br/" target="_blank">Unicentro</a></li>
+    </ul>
+
+    <hr class="linha">
+
+    <h2 class="secao-titulo">Habilidades</h2>
+    <ul>
+        <li>Comunicativa e adaptativa</li>
+        <li>Experiência em conserto de eletrodomésticos</li>
+        <li>Linguagem Python</li>
+        <li>Linguagem C++</li>
+        <li>Linguagem Java</li>
+    </ul>
+</body>
+
+</html>
