@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;
+            height: 300px;
+            background-color: bisque;
+        }
+
+        .item{
+            background-color: aliceblue;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .fit-content .item{
+            width: fit-content; /*se adpata a largura da pagina*/
+        }
+
+        .max-content .item{
+            width: max-content; /*largura maxima para caber o conteudo (lorem50 no caso)*/
+        }
+
+        .min-content .item{
+            width: min-content; /*largura d maior palavra*/
+        }
+
+        .overflow-hidden{ /*estoura o tamanho que temos*/
+            overflow: hidden; /*esconde o conteudo na largula*/
+        }
+
+        .overflow-scroll{
+            overflow: scroll; /*scrola tudo*/
+        }
+
+        .overflow-auto{
+            overflow: auto; /*parecido com o scroll, coloca apenas onde precisa, mais usado*/
+        }
+
+        .overflow-visible{
+            overflow: visible; /*padrão, fica um em cima do outro*/
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container fit-content overflow-hidden">
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eum nulla, minus
+            voluptatem maiores mollitia laborum iste quia tempora repellendus vel in error rem delectus reiciendis
+            quaerat dolore ipsam sequi.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, unde.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, corrupti facilis alias numquam
+            eveniet vero ad nulla a doloremque sunt.</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos ullam dolor eveniet
+            asperiores, cupiditate eaque esse veritatis commodi odit dolorem autem placeat sunt ut officiis eius alias
+            quas aliquam iure, rerum ab. Ab nulla est deleniti fugiat, quia, natus nihil perferendis ducimus, eius ullam
+            consectetur neque? Cum, at deserunt!</div>
+    </div>
+    <div class="container min-content overflow-scroll">
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eum nulla, minus
+            voluptatem maiores mollitia laborum iste quia tempora repellendus vel in error rem delectus reiciendis
+            quaerat dolore ipsam sequi.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, unde.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, corrupti facilis alias numquam
+            eveniet vero ad nulla a doloremque sunt.</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos ullam dolor eveniet
+            asperiores, cupiditate eaque esse veritatis commodi odit dolorem autem placeat sunt ut officiis eius alias
+            quas aliquam iure, rerum ab. Ab nulla est deleniti fugiat, quia, natus nihil perferendis ducimus, eius ullam
+            consectetur neque? Cum, at deserunt!</div>
+    </div>
+    <div class="container max-content overflow-auto">
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eum nulla, minus
+            voluptatem maiores mollitia laborum iste quia tempora repellendus vel in error rem delectus reiciendis
+            quaerat dolore ipsam sequi.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, unde.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, corrupti facilis alias numquam
+            eveniet vero ad nulla a doloremque sunt.</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos ullam dolor eveniet
+            asperiores, cupiditate eaque esse veritatis commodi odit dolorem autem placeat sunt ut officiis eius alias
+            quas aliquam iure, rerum ab. Ab nulla est deleniti fugiat, quia, natus nihil perferendis ducimus, eius ullam
+            consectetur neque? Cum, at deserunt!</div>
+    </div>
+</body>
+
+</html>
