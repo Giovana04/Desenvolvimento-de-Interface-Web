@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>função calc</title>
+    <style>
+        :root{
+            --header-height: 15rem;
+            --main-color: #ccc;
+        }
+
+        html{
+            font-size: 62.5%;
+        }    
+        
+        header{
+            width: 100%;
+            background-color: rgba(213, 147, 66, 0.532);
+            height: var(--header-height);
+            font-size: 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        main{
+            /*se eu reescrever a variavel aqui, ela vai sobrepor o root*/
+            min-height: calc(100vh - 15rem);
+            background-color: var(--main-color);
+            font-size: 2rem;
+            margin-top: 15rem;
+        }
+        
+        footer{
+            height: 10rem;
+            background-color: yellow;
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>

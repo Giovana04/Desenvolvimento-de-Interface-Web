@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades de Medida</title>
+    <style>
+        html {
+            font-size: 62.5%; /*normaliza para 10px ao inves do 16px padrão*/
+        }
+
+        /*em é percentual em 10, então 2.4 vira 24px. Porem, em considera hierarquia, então 2em de b é o dobro de 1.6em em p*/
+        h1 {
+            font-size: 2.4em;
+        }
+
+        /*Raramente usa pixel para tamanho de fonte, apenas para detalhes pequenos. Para responsividade em fonte: em e arem*/
+        p {
+            font-size: 1.6em;
+        }
+
+        /*rem não respeita a hierarquia*/
+        b {
+            color: brown;
+            font-size: 2rem;
+        }
+
+        .modificado{
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidades de Medida</h1>
+    <p>Lorem ipsum dolor sit amet <b>consectetur adipisicing elit</b>. Quaerat autem dolorum architecto quae mollitia
+        nobis
+        dolor tempore. Quis aliquam voluptatum odit. Aspernatur minima nobis sapiente excepturi quisquam autem esse
+        perspiciatis?</p>
+
+    <p class="modificado">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, dolor aut non numquam
+        reiciendis sint animi similique est ratione at neque, deleniti modi quas perspiciatis optio eius alias autem
+        quasi.</p>
+</body>
+
+</html>
