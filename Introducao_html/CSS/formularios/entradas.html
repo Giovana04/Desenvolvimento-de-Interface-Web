@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        input{
+            display: block;
+            margin-bottom: 10px;
+        }
+        .comorbidade input{
+            display: inline-block;
+        }
+
+        textarea{
+            resize: none; /*não deixa aumentar o tamanho*/
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <label for="filhos">Qnt de filhos:</label>
+            <input type="number" name="filhos" id="filhos" min="0" max="100">
+            <input type="date" min="2025-02-01" max="2025-05-07">
+            <input type="time" min="08:00" max="17:00"> <!--Trava na hora que subimete-->
+        </fieldset>
+
+        <fieldset class="comorbidade">
+            <legend>Comorbidade</legend>
+            <input type="radio" name="comorbidade" value="sim">sim
+            <input type="radio" name="comorbidade" value="não">não <!--só dá pra escolher um porque tem o mesmo nome, usar assim!-->
+        </fieldset>
+
+        <fieldset>
+            <legend>interesse</legend>
+            <label><input type="checkbox" name="interesse" value="html">html</label> <!--Dá pra escolher mais de um mesmo tendo o mesmo nome-->
+            <label><input type="checkbox" name="interesse" value="css">css</label> <!--Usa dentro do label pois ai selecion mesmo clicando no nome-->
+        </fieldset>
+
+        <fieldset>
+            <label for="selecLang">Linguagem:</label>
+            <select name="linguagem" id="selecLang">
+                <option value="html">html</option>
+                <option value="css">css</option>
+                <option value="js">js</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Selecione:</legend>
+            <select name="linguagem">
+                <optgroup label="front">
+                    <option value="html">html</option>
+                    <option value="css">css</option>
+                    <option value="js">js</option>
+                </optgroup>
+                <optgroup label="back">
+                    <option value="laravel">laravel</option>
+                    <option value="express">express</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Linguagem</legend>
+            <input type="text" list="langList">
+            <datalist id="langList"> <!--Autocomplit vinda de um banco de dados-->
+                <option value="html"></option>
+                <option value="css"></option>
+                <option value="js"></option>
+                <option value="laravel"></option>
+                    <option value="express"></option>
+        </fieldset>
+
+        <fieldset>
+            <legend>Deixe aqui a sua mensagem</legend>
+            <textarea name="mensagem" cols="99" rows="9" readonly>
+                CONTRATO DE UTILIZAÇÃ
+                1. Clausula 1
+                2. Clausula 2
+                    2.2 bah
+            </textarea>
+            <label><input type="checkbox">Li e aceito os termos de uso</label>
+        </fieldset>
+
+        <fieldset><!--Tem que escrever assim pois lê exatamente como foi feito.
+            readonly só permite leitura
+            disabled deixa fazer nada-->
+            <textarea name="mensagem" cols="99" rows="9" disabled> 
+CONTRATO DE UTILIZAÇÃ
+    1. Clausula 1
+    2. Clausula 2
+        2.2 bah
+            </textarea>
+        </fieldset>
+
+        <fieldset>
+            <label for="filhos">Qnt de filhos:</label>
+            <input type="number" name="filhos" id="filhos" min="0" max="100">
+            <label><input type="checkbox">Li e aceito os termos de uso</label>
+        </fieldset>
+        
+
+        <fieldset>
+            <input type="file">
+            <input type="search" placeholder="Digite Aqui">
+        </fieldset>
+
+        <input type="hidden" value="Valor_escondido"> <!--Não aparece no formulário, só no código-->
+        <input type="button" valor="Botão"> 
+        <button>ok</button>
+        <input type="range" min="0" max="100"> <!--Barra de rolagem-->
+        <input type="color">
+
+
+        <input type="submit" value="Enviar">
+    </form>    
+</body>
+
+</html>
