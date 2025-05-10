@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Layaout 17</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Layout 17</title>
+    <link rel="stylesheet" href="style.css" />
+
 </head>
+
 <body>
-    <img class="fundo" src="/Trab1/imagens/pattern-background-desktop-dark.svg" alt="Fundo"/>
+    <img class="fundo" src="/Trab1/imagens/pattern-background-desktop-dark.svg" alt="Fundo" />
+    
     <header>
-        <nav>
-            <div class="roxo">
-                <div id="branco"></div>
-            </div>
-        </nav>
+        <img src="/Trab1/imagens/icon-sun-light.svg" alt="Sol" />
+        <div id="roxo">
+            <div id="branco"></div>
+        </div>
+        <img src="/Trab1/imagens/icon-moon-light.svg" alt="Lua" />
     </header>
 
     <main>
-        <h1 class="t1">Welcome to the</h1>
-        <h1 class="t2">Frontend Quiz!</h1>
-        <div class="container">
-            <div class="HTML">
-                <img class="icon" src="/Trab1/imagens/icon-html.svg"/>
-                <p>HTML</p>
+        <section class="titulo">
+            <div>
+                <h1 class="t1"><span>Welcome to the</span> Frontend Quiz!</h1>
+                <p class="legenda"><i>Pick a subject to get started.</i></p>
             </div>
+        </section>
 
-            <div class="css">
-                <img class="icon" src="/Trab1/imagens/icon-css.svg"/>
-                <p>CSS</p>
-            </div>
-
-            <div class="javascript">
-                <img class="icon" src="/Trab1/imagens/icon-js.svg"/>
-                <p>JavaScript</p>
-            </div>
-
-            <div class="acessibilidade">
-                <img class="icon" src="/Trab1/imagens/icon-accessibility.svg"/>
-                <p>Accessibility</p>
-            </div>
-        </div>
+        <section class="container">
+            <ul>
+                <li>
+                    <div class="container-html">
+                        <img class="icon-html" src="/Trab1/imagens/icon-html.svg" />
+                        <p>HTML</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="container-css">
+                        <img class="icon-css" src="/Trab1/imagens/icon-css.svg" />
+                        <p>CSS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="container-js">
+                        <img class="icon-js" src="/Trab1/imagens/icon-js.svg" />
+                        <p>JavaScript</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="container-accessibility">
+                        <img class="icon-acces" src="/Trab1/imagens/icon-accessibility.svg" />
+                        <p>Accessibility</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
+
 </html>
