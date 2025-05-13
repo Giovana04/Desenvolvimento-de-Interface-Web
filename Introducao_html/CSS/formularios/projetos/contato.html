@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="contato.css" />
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Formulario de Contato</legend>
+
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" required placeholder="Insira o seu nome">
+
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" required placeholder="Insira o seu email">
+
+            <label for="subject">assunto</label>
+            <input type="text" name="subject" id="subject" placeholder="Insira o seu assunto">
+
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="message" rows="7" required maxlength="1000" minlength="20"
+                placeholder="Envie sua mensagem"></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

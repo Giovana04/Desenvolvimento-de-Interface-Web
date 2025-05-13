@@ -3,12 +3,7 @@
 }
 
 
-.rubik-bah {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 250;
-    font-style: normal;
-}  
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
     font-family: "Rubik", sans-serif;
@@ -43,7 +38,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 2em;
-    margin: 6em 13em 0 0;
+    margin: 6em 12em 0 0;
 }
 
 
