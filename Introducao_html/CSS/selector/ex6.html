@@ -1,0 +1,40 @@
+<!--
+pseudo classe :    
+pseudo elemento ::  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 2 - Seletores avançados</title>
+    <style>
+        button{
+            background-color: rgb(28, 5, 28);
+            color: white;
+            border: none;
+            padding: 1em;
+            margin-bottom: .5em;
+        }
+        button:disabled{
+            opacity: .5;
+        }
+        /*ele pega o paragrafo vazio e coloca um conteudo antes dele (se tem espaço não ta vazio)*/
+        p:empty::before{
+            content: "sem conteudo";
+            color: red;
+        }
+
+        
+    </style>
+</head>
+<body>
+   <button>vai</button>
+   <button disabled>vai disabled</button>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, quod.</p>
+   <p> </p>
+   <p>Pós espaço</p>
+   <p></p>
+   <p>Pós sem espaço</p>
+</body>
+</html>

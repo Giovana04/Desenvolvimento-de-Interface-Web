@@ -1,0 +1,35 @@
+<!--
+pseudo classe :    
+pseudo elemento ::  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 2 - Seletores avançados</title>
+    <style>
+        /*estiliza o elemento qe tem title*/
+        a[title]{
+            background-color: rgb(209, 139, 139);
+        }
+        /*estiliza o elemento que tem https no começo*/
+        a[href^="https"]{
+            background-color: rgb(139, 139, 209);
+        }
+        /*estiliza o elemento que tem html no fim*/
+        a[href$="html"]{
+            background-color: rgb(139, 209, 166);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <a>sem titulo</a>
+        <a title="preenchido">Com titulo</a>
+        <a href="ex1.html">link interno</a>
+        <a href="https://www.google.com">link externo</a>
+    </article>
+
+</body>
+</html>

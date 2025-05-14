@@ -1,0 +1,54 @@
+<!--
+pseudo classe :    
+pseudo elemento ::  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 2 - Seletores avançados</title>
+    <style>
+        /* colore todo primeiro e ultimo elemento
+        div :first-child{
+            background-color: rgb(209, 139, 139);
+        }
+
+        div :last-child{
+            background-color: rgb(139, 139, 209);
+        }*/
+
+        /*primeiro elemento desde que ele seja paragrafo, e ultimo elemento desde que ele seja link*/
+        div p:first-child{
+            background-color: rgb(209, 139, 139);
+        }
+
+        div a:last-child{
+            background-color: rgb(139, 139, 209);
+        }
+        /*primeiro elemento a de cada div*/
+        div a:first-of-type{
+            background-color: rgb(139, 209, 146);
+        }
+
+        /*segundoo elemento a de cada div*/
+        div :nth-child(2){
+            background-color: rgb(165, 38, 48);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">bah</a>
+        <p>Primeiro paragrafo</p>
+        <p>Segundo paragrafo</p>
+        <p>Terceiro paragrafo</p>
+    </div>
+    <div>
+        <a href="#">1 link</a>
+        <a href="#">2 link</a>
+        <a href="#">3 link</a>
+        <p>puts</p>
+    </div>
+</body>
+</html>

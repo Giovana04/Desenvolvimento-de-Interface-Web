@@ -1,0 +1,58 @@
+<!--
+pseudo classe :    
+pseudo elemento ::  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 2 - Seletores avançados</title>
+    <style>
+        input[type="text"]{
+            background-color: rgb(156, 83, 83);
+            border: none;
+            padding: .5em;
+        }
+
+        input[type="text"]:read-write{
+            background-color: rgb(88, 85, 193);
+            border: none;
+            padding: .5em;
+        }
+
+        input[type="text"]:read-only{
+            background-color: rgb(83, 156, 85);
+            border: none;
+            padding: .5em;
+        }
+
+        /*só oq ta escrito no placeholder*/
+        input[type="text"]::placeholder{
+            color: rgb(214, 195, 133);
+            border: none;
+            padding: .5em;
+        }
+
+        input[type="text"]:placeholder-shown{
+            background-color: rgb(196, 59, 178);
+            border: none;
+            padding: .5em;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" value="valor_inicial"><br/>
+        <br/>
+        <input type="text" value="valor" disabled><br/>
+        <br/>
+        <input type="text" placeholder="valor_inicial"><br/>
+        <br/>
+        <input type="text" value="valor_inicial"><br/>
+        <br/>
+        <input type="text"><br/>
+    </form>
+</body>
+</html>
