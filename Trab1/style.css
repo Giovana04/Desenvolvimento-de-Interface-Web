@@ -1,5 +1,9 @@
 :root{
     font-size: 62.5%;
+    --fundocolor: #313e51;
+    --textcolor: #ffffff;
+    --roxo: #A729F5;
+    --opcoes: #3b4d66;
 }
 
 
@@ -14,23 +18,16 @@ body {
     color: #FFFFFF;
 }
 
-
-p, h1{
-    color: #ffffff;
-    font-size:2em;
-}
-
 img.fundo{
     display: flex; /*se eu apagar a imagem de fundo buga*/
     position: absolute;
-    margin: 0;
     width: 100%;
     z-index: -1;
 }
 
 main {
     justify-content: space-between;
-    margin: 5em 7em 0 19em;
+    margin: 3em 7em 0 19em;
 }
 
 header {
@@ -38,7 +35,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 2em;
-    margin: 6em 12em 0 0;
+    margin: 6em 10em 0 0;
 }
 
 
@@ -47,9 +44,8 @@ header {
     height: 3em;
     width: 4.5em;
     border-radius: 2em;
-    position: relative;
     display: flex; /*pq???? ja ta o body???*/
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: end;
     padding-right: 0.5em;
@@ -65,21 +61,22 @@ header {
 
 span{
     font-weight: 200;
-    text-size-adjust: 120%;
+    
 }
 
 .t1 {
     display: flex;
-    margin: -.1em; /*como eu resolvo sem precisar do negativo?*/
+    margin-top: .1em; /*como eu resolvo sem precisar do negativo?*/
     flex-direction: column; /*PQ???? JA TA NO BODY*/ 
     font-size: 6.5em;
 }
 
 .legenda {
     font-size: 1.7em;
-    color: #626c7f;
-    margin-top: 2em;
-    margin-left: -.5em;
+    color: #72819b;
+    margin-top: 4em;
+    margin-left: .3em;
+    font-weight: 500;
 }
 
 .icon-html, .icon-css, .icon-js, .icon-acces{
@@ -104,28 +101,29 @@ span{
 }
 
 section{
-    position: relative;
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 10em;
     vertical-align: top;
+}
+
+p{
+    font-size: 2em;
 }
 
 ul{
     list-style-type: none;
-    padding: 0;
     margin: 0;
 }
 
 .container-html, .container-css, .container-js, .container-accessibility {
     background-color: #3b4d66;
     width: 150%;
-    border: #3b4d66 solid 0.2em;
     gap: 2em;
-    padding: 1.2em;
+    padding: 1.4em;
     margin: 2em;
     border-radius: 2em;
     display: flex;
-    margin-left: 15em;
+    margin-left: 10em;
 }
 
 

@@ -24,11 +24,11 @@ fieldset{
 legend{
     text-align: start;
     color: #3b78c2;
-    font-size: 2em;
+    font-size: 3em;
     padding-top: 1em;
 }
 
-label, input, textarea{
+label, input{
     display: block;
     width: 95%;
     height: 2em;
