@@ -24,7 +24,7 @@ fieldset{
 legend{
     text-align: start;
     color: #3b78c2;
-    font-size: 2em;
+    font-size: 3em;
     padding-top: 1em;
 }
 
@@ -50,12 +50,11 @@ p, .baixo{
 
 p {
     margin: 0;
-    font-size: .8em;
+    font-size: .8em
 }
 
 a{
     color: #5b3bc2;
-    font-size: .9em
 }
 
 
@@ -72,7 +71,7 @@ a{
 }
 
 button{
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 0.2em;
     border: none;
     margin: 0;
