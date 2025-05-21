@@ -95,10 +95,12 @@ span{
 
 /*Main-Opções*/
 
+
 ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex-direction: column;
 }
 
 .opcoes-html, .opcoes-css, .opcoes-js, .opcoes-accessibility {

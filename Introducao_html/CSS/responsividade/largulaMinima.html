@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media type</title>
+    <style>
+        @media screen and (max-width: 500px){
+            body {
+            background-color: rgb(98, 59, 9);
+            color: white;
+            }
+        }
+        /*Se ta acima da largura minima, usa o css da media. Se estiver menor usa o padrão 
+        (normalmente muda o display: flex de linha para coluna)*/
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Media Type</h1>
+    <a href="https://www3.unicentro.br/decomp/">Decomp - Unicentro</a>
+</body>
+
+</html>
