@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Giovana Fernandes Nascimento</title>
+    <style>
+        :root {
+            font-size: 62.5%; 
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #7eaee286;
+            margin: 0;
+            padding: 1rem;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            background-color: transparent;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            font-size: 2em;
+            position: relative;
+            width: 100%;
+        }
+
+        .img {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            border: 0.3rem solid #09385a; 
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #1b5177;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #1b5177;
+            margin-top: 0.5rem;
+        }
+
+        .linha {
+            border: none;
+            border-top: 0.1rem solid #09385a;
+            margin: 2rem 0;
+            width: 80%; 
+        }
+
+        main {
+            font-size: 1.6rem;
+            color: #1b5177;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); 
+            gap: 2rem;
+            padding: 0 2rem;
+            max-width: 120rem; 
+            width: 100%;
+            flex-grow: 1; 
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1); 
+            border: #09385a 0.1em solid;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            color: #0077cc;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        section p,
+        section ol,
+        section ul {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        section li {
+            margin-bottom: 0.5rem;
+        }
+
+        a:link {
+            color: #117fec;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #0de10d76;
+        }
+
+        a:hover {
+            background-color: #e7c0e9;
+            font-size: 1.8rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        ol li {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        ul li {
+            list-style-type: upper-roman;
+        }
+
+        .destaque {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 1.4rem;
+            color: #555;
+            margin-top: 4rem;
+            padding-bottom: 2rem;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            main {
+                grid-template-columns: repeat(3, 1fr); 
+                max-width: 140rem;
+                padding: 0 4rem;
+            }
+
+            .dadosPessoais {
+                grid-column: span 1;
+            }
+
+            .sobre {
+                grid-column: span 2;
+            }
+
+            .formacao,
+            .experiencia,
+            .habilidades {
+                grid-column: span 1;
+            }
+
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            main {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 3rem;
+            }
+
+            .dadosPessoais,
+            .sobre,
+            .formacao,
+            .experiencia,
+            .habilidades {
+                grid-column: span 1;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            body {
+                padding: 1rem;
+            }
+
+            header {
+                padding: 1.5rem 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .img {
+                width: 12rem;
+                height: 12rem;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            .linha {
+                margin: 1.5rem 0;
+                width: 90%;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1.5rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            a:hover {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Giovana Fernandes Nascimento</h1>
+        <img class="img" src="/Curriculo/imagens/gato terno.jpg" alt="Gatin de Terno">
+        <h3 id="curso">Cientista da Computação - 20 anos</h3>
+    </header>
+
+    <hr class="linha">
+
+    <main>
+        <section class="dadosPessoais">
+            <h2>Dados Pessoais</h2>
+            <p class="texto">
+                Celular: <span class="destaque">(11) 96406-1331</span> <br>
+                Email: <a href="mailto:giovanafn0401@gmail.com" class="link contato-link">giovanafn0401@gmail.com</a>
+            </p>
+        </section>
+
+        <section class="sobre">
+            <h2>Sobre</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In corrupti nihil necessitatibus doloremque enim
+                nam neque atque debitis, adipisci illo, dolore, maxime placeat illum. Assumenda, libero. Assumenda
+                doloremque accusamus quisquam!</p>
+        </section>
+
+        <section class="formacao">
+            <h2>Formação</h2>
+            <ol>
+                <li><strong>2023 </strong>- Faculdade de Ciência da Computação</li>
+                <li><strong>2024 </strong>- Curso Google de Fundamentos em Nuvem</li>
+                <li><strong>2023 </strong>- Curso Básico de Linguagem R</li>
+                <li><strong>2017</strong> - Curso <em>Intermediário</em> de Japonês</li>
+            </ol>
+        </section>
+
+        <section class="experiencia">
+            <h2>Experiência</h2>
+            <ul>
+                <li><strong>2020 </strong>- Vendedora em Loja de Roupa Anca Modas</li>
+                <li><strong>2022 </strong>- Aprendiz em Setor Financeiro</li>
+                <li><strong>2023-2025 </strong>- Estágio de Assistência Técnica na <a href="https://www3.unicentro.br/"
+                        target="_blank">Unicentro</a></li>
+            </ul>
+        </section>
+
+        <section class="habilidades">
+            <h2 class="secao-titulo">Habilidades</h2>
+            <ul>
+                <li>Comunicativa e adaptativa</li>
+                <li>Experiência em conserto de eletrodomésticos</li>
+                <li>Linguagem Python</li>
+                <li>Linguagem C++</li>
+                <li>Linguagem Java</li>
+            </ul>
+        </section>
+    </main>
+
+    <hr class="linha">
+
+    <footer>
+        <p>Desenvolvido por Giovana Fernandes Nascimento</p>
+    </footer>
+</body>
+
+</html>
