@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n1 = parseFloat(prompt("Digite um numero de zero a dez"));
+        let n2 = parseFloat(prompt("Digite um numero de zero a dez"));
+        let media = (n1 + n2) / 2;
+        alert("aprovado?" + (media >= 4 ? "sim" : "não") + "\nMédia: " + media);
+        alert("aprovado?" + (media >= 4 && (n1 > 0 && n2 > 0))); //retorna true ou false
+        //O console do inspecionar do navegador pode ser usado para ver o resultado e compilar javaScript
+        // == compara o valor, enquanto === compara o valor e o tipo
+        // != compara se os valores são diferentes, enquanto !== compara se os valores e tipos são diferentes
+        //"5" != 5 false, pois o valor é o mesmo. "5" !== 5 true, pois o tipo é diferente (string vs number)
+        // 1==true é true, 1===true false, pois o tipo é diferente (number vs boolean)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

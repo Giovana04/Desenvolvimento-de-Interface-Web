@@ -41,7 +41,7 @@ header {
     height: 3em;
     width: 4.5em;
     border-radius: 2em;
-    display: flex; /*pq???? ja ta o body???*/
+    display: flex; 
     flex-direction: row;
     align-items: center;
     justify-content: end;
@@ -136,14 +136,3 @@ ul{
 .icon-acces{
     background-color: #FFF1E9;
 }
-
-
-
-
-
-
-
-
-
-
-  
