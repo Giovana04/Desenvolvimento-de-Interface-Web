@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="txtNome" placeholder="nome"> <br />
+        <input type="email" id="txtEmail" placeholder="email"> <br />
+        <textarea cols="30" rows="10" readonly>
+texto do contrato...
+        </textarea> <br />
+        <input type="checkbox" id="contrado" onchange="enableButton()"> 
+        <label for="contrato">Li e aceito os termos</label> <br />
+        <input type="submit" value="Cadastrar"> <br />
+
+
+        <script>
+            const txtNome = document.querySelector("#txtNome");
+            const txtEmail = document.querySelector("#txtEmail");
+            const btn = document.querySelector("form input[type='submit']"); //retorna o primeiro input do tipo submit (so um)
+            btn.disabled = true; //desabilita o botao
+            const contrato = document.querySelector("#contrado");
+            function enableButton() {
+                let Checked = contrato.checked; //verifica se o checkbox esta marcado
+                console.log(Checked);
+                btn.disabled = !Checked; //habilita o botao se o checkbox estiver marcado, desabilita se nao estiver
+                //if (Checked) btn.disabled = false; //habilita o botao
+                //else btn.disabled = true; //desabilita o botao
+            }
+
+            //Quanod usar querySelector: Quando estiver pegando dados
+            //quando usar querySelectorAll: Quando estiver estilizando ou pegando mais de um elemento
+
+            //const labelContrato = document.querySelector("label[for='contrato']");
+            //console.log(labelContrato.htmlfor)
+
+        </script>
+    </form>
+</body>
+
+</html>
