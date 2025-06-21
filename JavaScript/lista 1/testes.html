@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n1 = parseFloat(prompt("1 - digite um número: "))
+        let n2 = parseFloat(prompt("1 - digite um número: "))
+
+        console.log("Soma: " + (n1 + n2))
+        console.log("Subtração: " + (n1 - n2))
+        console.log("Multiplicação: " + (n1 * n2))
+        if (n2 !== 0) {
+            console.log("Divisão: " + (n1 / n2))
+            console.log("Resto: " + (n1 % n2))
+        } else {
+            console.log("Divisão: Não é possível dividir por zero.")
+            console.log("Resto: Não é possível calcular o resto com divisão por zero.")
+        }
+        
+        
+        console.log("\n\n\n\n")
+
+        let idade = parseInt(prompt("2) Qual sua idade?"))
+        if(idade >= 18){ console.log("2)\nVocê é maior de idade!")}
+        else{ console.log("2)\nVocê não é maior de idade")}
+
+        console.log("\n\n\n\n")
+
+        let cont = parseFloat(prompt("3 - Digite o valor a ser contado: "))
+        for(let i = 0; i<=cont; i++){
+            console.log(i + ", ")
+        }
+
+        console.log("\n\n\n\n")
+
+        let tamanhoArray = parseInt(prompt("4 - Digite o tamanho do array:"))
+        let arr = []
+        for (let i = 0; i < tamanhoArray; i++) {
+            arr[i] = i + 1
+        }
+
+        console.log("--- Exercício 4 ---")
+        arr.forEach(function(el, i) {
+            if (el % 2 !== 0) {
+                console.log("Elemento ímpar no índice " + i + ": " + el)
+            }
+        })
+
+
+
+        console.log("\n\n\n\n")
+
+        let peso = parseFloat(prompt("5 - Digite seu peso:  "))
+        let altura = parseFloat(prompt("5 - Digite sua altura "))
+
+        if (!isNaN(peso) && !isNaN(altura) && altura > 0) {
+            let imc = peso / (altura * altura)
+            let classificacao = ""
+
+            if (imc < 18.5) {
+                classificacao = "Abaixo do peso"
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                classificacao = "Peso normal"
+            } else if (imc >= 25 && imc <= 29.9) {
+                classificacao = "Sobrepeso"
+            } else if (imc >= 30 && imc <= 34.9) {
+                classificacao = "Obesidade Grau I"
+            } else if (imc >= 35 && imc <= 39.9) {
+                classificacao = "Obesidade Grau II"
+            } else {
+                classificacao = "Obesidade Grau III"
+            }
+            console.log(`SIMC: ${imc.toFixed(2)} (${classificacao})`)
+        } else {
+            console.log("digite valores válidos")
+        }
+
+
+        console.log("\n\n\n\n")
+
+        let numeroInteiro = parseInt(prompt("6 - Digite um número inteiro:"))
+        if (!isNaN(numeroInteiro)) {
+            if (numeroInteiro % 2 === 0) {
+                console.log(`O número ${numeroInteiro} é PAR.`)
+            } else {
+                console.log(`O número ${numeroInteiro} é ÍMPAR.`)
+            }
+        } else {
+            console.log("digite um n inteiro válido.")
+        }
+
+
+        console.log("\n\n\n\n")
+
+        let numeroRegressivo = parseInt(prompt("7 - Digite um número para a contagem regressiva:"))
+        if (!isNaN(numeroRegressivo) && numeroRegressivo >= 0) {
+            console.log("Contagem regressiva:")
+            for (let i = numeroRegressivo; i >= 0; i--) {
+                console.log(i)
+            }
+        } else {
+            console.log("digite um número não negativo")
+        }
+
+        console.log("\n\n")
+
+        let nota1 = parseFloat(prompt("8 - Digite a 1ª nota:"))
+        let nota2 = parseFloat(prompt("8 - Digite a 2ª nota:"))
+        let nota3 = parseFloat(prompt("8 - Digite a 3ª nota:"))
+        let nota4 = parseFloat(prompt("8 - Digite a 4ª nota:"))
+
+        if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3) && !isNaN(nota4)) {
+            let media = (nota1 + nota2 + nota3 + nota4) / 4
+            console.log(`média: ${media.toFixed(2)}`)
+            if (media >= 7) {
+                console.log("Você foi APROVADO.")
+            } else {
+                console.log("Você foi REPROVADO.")
+            }
+        } else {
+            console.log("digite notas válidas.")
+        }
+
+        console.log("\n\n\n\n")
+
+        let listaNumeros = []
+        for (let i = 0; i < 10; i++) {
+            listaNumeros.push(Math.floor(Math.random() * 100) + 1)
+        }
+        console.log("Lista de números: " + listaNumeros.join(", "))
+
+        let maiorNumero = listaNumeros[0]
+        for (let i = 1; i < listaNumeros.length; i++) {
+            if (listaNumeros[i] > maiorNumero) {
+                maiorNumero = listaNumeros[i]
+            }
+        }
+        console.log(`O maior número na lista é: ${maiorNumero}`)
+        console.log("\n\n")
+
+        let textoOriginal = prompt("10 - Digite uma palavra ou frase para inverter:")
+        if (textoOriginal) {
+            let textoInvertido = textoOriginal.split('').reverse().join('')
+            console.log(`Texto original: "${textoOriginal}"`)
+            console.log(`Texto invertido: "${textoInvertido}"`)
+        } else {
+            console.log("Nenhum texto foi digitado para inverter.")
+        }
+    </script>
+
+</body>
+
+</html>
