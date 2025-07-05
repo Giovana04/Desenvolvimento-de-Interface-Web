@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Delegação de eventos</h1>
+    <div id="container">
+        <button class="btn">Botão 1</button>
+        <button class="btn">Botão 2</button>
+        <button class="btn">Botão 3</button>
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        const btns = document.querySelectorAll('.container button');
+        btns.addEventListener('click', function(e) { //assim vai pegar so o primeiro botão
+            console.log("clicou no botão")
+        });
+        btns[1].addEventListener('click', function(e) { //assim vai pegar so o segundo botão
+            console.log("clicou no botão")
+        });
+        btns[1].addEventListener('click', function(e) { //assim vai pegar so o segundo botão
+            console.log(e.target) // qual elemento foi clicado
+            console.log(e.currentTarget) // qual elemento está ouvindo o evento
+        });
+    </script>
+</body>
+</html>

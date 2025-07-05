@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> teste dom </h1>
+    <div class="container">
+        <p>teste 1</p>
+        <p>lorem <a href="#">link</a>.</p>
+        <p>teste 2</p>
+        <h2>Lista</h2>
+        <ul id="list">
+            <li>item 1</li>
+            <li>item 2
+                <ul>
+                    <li>item 2.1</li>
+                    <li>item 2.2</li>
+                    <li>item 2.3</li>
+                </ul>
+            </li>
+
+            <li>Item <a href="#">link</a></li>
+        </ul>
+    </div>
+
+    <script>
+        //console.log(document.body)
+        //console.log(document.body.parentElement) //html como elemento pai dele
+        //console.log(document.body.parentNode) //html como nó pai
+
+        const html = document.body.parentElement
+        //console.log(html.parentElement)
+        //console.log(html.parentNode)
+
+        const h2 = document.querySelector("h2")
+        //console.log(h2.nextSibling)
+        //console.log(h2.previousSibling)
+        const h2NextSibling = h2.nextElementSibling
+        h2NextSibling.style.background = "yellow"
+        const sublist = document.querySelector("ul ul")
+        console.log(sublist.children) //htmlCollect - pega so os 3 elementos
+        console.log(sublist.childNodes) //nodeList - pega até a quebra de linha, então pega texto, quebra de linha, texto, quebra de linha...
+        const link = document.querySelector("a")
+        console.log(link.parentElement.childNodes)
+        console.log(link.parentElement.children)
+        console.log(link.parentElement.firstChild)
+        console.log(link.parentElement.firstElementChild) //element pega so o elemento em si, mais nada!
+        console.log(link.parentElement.lastChild)
+        console.log(link.parentElement.lastElementChild)
+    </script>
+</body>
+</html>
