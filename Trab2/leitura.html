@@ -1,30 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORV</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sobre ORV - Fanbase BR</title>
+    <link rel="stylesheet" href="styleFinal.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="/Trab2/util.js"></script>
 </head>
 
 <body>
+    <header class="cabecalho-principal">
+        <div class="container cabecalho-grid">
+            <div class="logo">
+                <img src="/Trab2/imagens/iconBranco.jpg" alt="LogoORV">
+                <span>Omniscient Reader's Viewpoint BR</span>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="navegacao-principal">
+                <ul>
+                    <li><a href="/Trab2/index.html">Início</a></li>
+                    <li><a href="/Trab2/quiz.html">Quiz</a></li>
+                    <li><a href="/Trab2/leitura.html">Por Que Ler?</a></li>
+                    <li><a href="/Trab2/leitura.html">Curiosidades</a></li>
+                </ul>
+            </nav>
+            <div class="busca-perfil">
+                <input type="text" placeholder="BUSCAR">
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <section class="areas-conteudo">
+            <div class="container grid-principal">
+                <div class="item-grid secao-porque-ler">
+                    <h2>POR QUE LER ORV?</h2>
+                    <img src="/Trab2/imagens/cena-leitura.jpg" alt="Kim Dokja lendo a novel" class="img-destaque">
+                    <p>Omniscient Reader's Viewpoint (ORV), ou "Leitor Onisciente", não é apenas mais uma história sobre o fim do mundo. É uma jornada épica que redefine o significado de narrativa, explorando a relação entre o leitor, o protagonista e o autor de maneiras surpreendentes. Se você busca uma obra com profundidade, aqui estão alguns motivos para mergulhar de cabeça:</p>
+                    <ul class="motivos-lista">
+                        <li><strong>Uma Premissa Única:</strong> Imagine que o mundo se transforma no universo do seu livro favorito, e só você conhece o enredo completo. Essa é a realidade de Kim Dokja. A forma como ele usa seu conhecimento para subverter a história original e salvar as pessoas que ama é o motor de uma trama cheia de reviravoltas e estratégias geniais.</li>
+                        <li><strong>Personagens Inesquecíveis:</strong> Longe de heróis perfeitos, os personagens de ORV são complexos, cheios de falhas e moralmente ambíguos. Desde o calculista, mas altruísta, Kim Dokja, até o protagonista original e eternamente regressor, Yoo Jonghyuk, cada personagem tem suas próprias motivações e um desenvolvimento cativante.</li>
+                        <li><strong>World-Building Grandioso:</strong> A história constrói um universo fascinante onde mitologias de todo o mundo — coreana, grega, nórdica, bíblica — se tornam reais. As "Constelações" (seres históricos e míticos) assistem e patrocinam os humanos, criando um sistema de poder complexo e original.</li>
+                        <li><strong>Uma Carta de Amor à Leitura:</strong> No seu cerne, ORV é uma homenagem a todas as histórias que já lemos e aos mundos que elas nos permitiram habitar. A obra explora temas como destino, livre-arbítrio e o poder que uma história tem de mudar a realidade e, mais importante, de nos salvar.</li>
+                    </ul>
+                </div>
+
+                <div class="item-grid secao-curiosidades">
+                    <h2>CURIOSIDADES DO UNIVERSO ORV</h2>
+                    <img src="/Trab2/imagens/star-stream.jpg" alt="O Star Stream" class="img-destaque">
+                    <ul class="curiosidades-lista">
+                        <li><strong>Autoria Misteriosa:</strong> "Sing Shong" (싱숑) não é uma pessoa, mas sim o pseudônimo de um casal de autores (marido e mulher) que escreveram a novel juntos. Eles mantêm suas identidades em segredo até hoje.</li>
+                        <li><strong>Sucesso Absoluto:</strong> A webnovel original foi serializada na plataforma coreana Munpia e concluída com 551 capítulos. Seu sucesso foi estrondoso, gerando um dos fandoms mais dedicados e apaixonados da Coreia do Sul e, posteriormente, do mundo.</li>
+                        <li><strong>O Que é o Star Stream?:</strong> O "Star Stream" é o sistema intergaláctico que transmite os "cenários" apocalípticos como forma de entretenimento para as Constelações. É, literalmente, um canal de streaming onde a sobrevivência da humanidade é o conteúdo principal.</li>
+                        <li><strong>O Número 1864:</strong> O número da regressão de Yoo Jonghyuk na qual Kim Dokja interfere, 1864, aparece frequentemente na história de formas simbólicas e em momentos cruciais, tornando-se um número icônico para os fãs. Outra variação importante que aparece é a do "mundo paralelo", a volta 999.</li>
+                        <li><strong>Adaptações a Caminho:</strong> Além da popularíssima adaptação em webtoon, que traz à vida as cenas da novel com uma arte espetacular, um filme em live-action está em produção na Coreia do Sul, com um elenco de estrelas, incluindo os atores Lee Min-ho (como Yoo Jonghyuk) e Ahn Hyo-seop (como Kim Dokja).</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="/Trab2/index.html" class="btn" style="margin-top:2.5rem;">Voltar ao Início</a>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2025 Omniscient Reader's Viewpoint BR Fanbase.</p>
+            <p>Desenvolvido por Giovana Fernandes Nascimento</p>
+        </div>
+    </footer>
 
     <script>
-        let ultimoScroll = 0;
-        const cabecalho = document.querySelector('.cabecalho-principal');
-        window.addEventListener('scroll', () => {
-            const scrollAtual = window.scrollY;
-            if (window.innerWidth <= 1024) {
-                if (scrollAtual > ultimoScroll && scrollAtual > 100) {
-                    cabecalho.classList.add('cabecalho-escondido');
-                } else {
-                    cabecalho.classList.remove('cabecalho-escondido');
-                }
-            }
+        document.addEventListener("DOMContentLoaded", () => {
+            inicializarFuncoesGlobais();
         });
-        ultimoScroll = scrollAtual;
     </script>
 </body>
 

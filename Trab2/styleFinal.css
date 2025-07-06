@@ -179,7 +179,7 @@ a:hover {
 }
 
 .busca-perfil {
-    grid-area: busca;
+    grid-area: "busca";
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -194,17 +194,16 @@ a:hover {
     font-size: 1em;
     outline: none;
     transition: width 0.3s ease;
-    max-width: 100%;
-    width: 16rem;
-    transition: width 0.3s ease;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.busca-perfil input:focus {
+    max-width: 24rem;
 }
 
 .busca-perfil input::placeholder {
     color: var(--texto-medio);
-}
-
-.busca-perfil input:focus {
-    width: 100%;
 }
 
 .busca-perfil button {
@@ -380,7 +379,7 @@ a:hover {
 
 .opcoes {
     display: flex;
-    flex-direction: column; /* empilha as opções */
+    flex-direction: column;
     gap: 1.2rem;
 }
 
@@ -408,8 +407,17 @@ input[type="radio"] {
 
 /*<------------------------------ SOBRE / CURIOSIDADES ----------------------------->*/
 
+.curiosidades-lista li{
+    margin-bottom: 2em;
+    text-align: left;
+    color: var(--texto-claro);
+}
 
-
+.motivos-lista li {
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--texto-claro);
+}
 
 /* ------------------------RESPONSIVIDADE----------------------- */
 
@@ -453,13 +461,13 @@ input[type="radio"] {
     }
 
     .busca-perfil {
-        width: 100%;
+        width: 80%;
         justify-content: center;
     }
 
     .busca-perfil input {
-        width: 90%;
-        max-width: 22rem;
+        width: 100%;
+        max-width: 18rem;
     }
 
 
@@ -489,16 +497,15 @@ input[type="radio"] {
 
     .navegacao-principal ul {
         display: flex;
-        gap: 3rem;
-    }
-
-    .busca-perfil {
-        display: flex;
-        justify-content: flex-end;
+        gap: 2.5rem;
     }
 
     .busca-perfil input {
-        width: 18rem;
+        width: 16rem;
+    }
+
+    .busca-perfil input:focus {
+        width: 22rem;
     }
 
     .menu-toggle {
