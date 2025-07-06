@@ -68,11 +68,33 @@ function mostrarToast(mensagem) {
 
     setTimeout(() => {
         toast.style.opacity = "0";
-        setTimeout(() => toast.remove(), 400);
-    }, 3000);
+        setTimeout(() => toast.remove(), 400); // Remove após a transição
+    }, 4000); // Tempo de exibição do toast em milissegundos
+}
+
+function mostrarFormularioQuiz() {
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+    const escolhaQuiz = document.getElementById('escolha-quiz');
+    const formConhecimento = document.getElementById('form-quiz');
+    const formPersonalidade = document.getElementById('form-quiz-personalidade');
+    if (tipo === 'conhecimento') {
+        if (escolhaQuiz && formConhecimento) {
+            escolhaQuiz.style.display = 'none';
+            formConhecimento.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    } else if (tipo === 'personalidade') {
+        if (escolhaQuiz && formPersonalidade) {
+            escolhaQuiz.style.display = 'none';
+            formPersonalidade.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
 }
 
 function inicializarFuncoesGlobais() {
     aplicarScrollSuave();
     configurarMenuResponsivo();
+    mostrarFormularioQuiz();
 }

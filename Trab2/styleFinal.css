@@ -342,7 +342,7 @@ a:hover {
     background-color: var(--fundo-cabecalho-rodape);
     color: var(--texto-medio);
     text-align: center;
-    padding: 1rem 0;
+    padding: 0;
     border-top: 0.1rem solid var(--borda);
     font-size: 0.9em;
 }

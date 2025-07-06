@@ -166,16 +166,17 @@
     <footer class="rodape-principal">
         <div class="container">
             <p>&copy; 2025 Omniscient Reader's Viewpoint BR Fanbase.</p>
-            <p>Feito por Giovana Fernandes Nascimento</p>
+            <p>Desenvolvidopor Giovana Fernandes Nascimento</p>
         </div>
     </footer>
 
     <script>
-
-        document.addEventListener("DOMContentLoaded", () => { 
+        //inicializa as funções de util.js
+        document.addEventListener("DOMContentLoaded", () => {
             inicializarFuncoesGlobais();
         });
 
+        //------------------------Lógica dos quiz----------------------------
 
         document.addEventListener("DOMContentLoaded", () => {
             const escolhaQuiz = document.getElementById('escolha-quiz');
@@ -209,6 +210,20 @@
                 e.preventDefault();
                 let acertos = 0;
                 const perguntas = formConhecimento.querySelectorAll('.pergunta');
+                let perguntaNaoRespondida = null;
+
+                perguntas.forEach(pergunta => {
+                    const selecionada = pergunta.querySelector('input:checked');
+                    if (!selecionada && !perguntaNaoRespondida) {
+                        perguntaNaoRespondida = pergunta;
+                    }
+                });
+
+                if (perguntaNaoRespondida) {
+                    mostrarToast("Você precisa responder todas as perguntas!");
+                    perguntaNaoRespondida.scrollIntoView({ behavior: 'smooth' });
+                    return;
+                }
 
                 perguntas.forEach(pergunta => {
                     const correta = pergunta.dataset.correta;
