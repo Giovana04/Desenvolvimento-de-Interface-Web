@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omniscient Reader's Viewpoint - Fanbase BR</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleFinal.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="cabecalho-principal">
         <div class="container cabecalho-grid">
@@ -14,28 +18,31 @@
                 <img src="/Trab2/imagens/iconBranco.jpg" alt="LogoORV">
                 <span>Omniscient Reader's Viewpoint BR</span>
             </div>
+
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+
             <nav class="navegacao-principal">
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#quiz">Quiz</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="#porque-ler">Por Que Ler?</a></li>
-                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="/Trab2/index.html">Início</a></li>
+                    <li><a href="/Trab2/quiz.html">Quiz</a></li>
+                    <li><a href="/Trab2/leitura.html">Por Que Ler?</a></li>
+                    <li><a href="/Trab2/leitura.html">Curiosidades</a></li>
                 </ul>
             </nav>
+
             <div class="busca-perfil">
                 <input type="text" placeholder="BUSCAR">
-                <button><i class="fas fa-search"></i></button>
             </div>
         </div>
     </header>
 
+
     <main>
-        <section id="banner-hero" class="banner-apresentação">
-                <div class="titulo">
-                    <h1>OMNISCIENT READER'S VIEWPOINT</h1>
-                    <button class="btn-hero">COMEÇAR AGORA</button>
-                </div>
+        <section class="banner-apresentação">
+            <div class="titulo">
+                <h1>OMNISCIENT READER'S VIEWPOINT</h1>
+                <a href="#areas-conteudo" class="btn hero">COMEÇAR AGORA</a>
+            </div>
 
             </div>
         </section>
@@ -44,19 +51,20 @@
             <div class="container grid-principal">
                 <div class="item-grid secao-quiz">
                     <h2>TESTE SEU CONHECIMENTO</h2>
-                    <p class="intro-quiz">Nosso quiz exclusivo sobre ORV! Descubra qual personagem você seria ou teste seus conhecimentos sobre a novel.</p>
+                    <p class="intro-quiz">Nosso quiz exclusivo sobre ORV! Descubra qual personagem você seria ou teste
+                        seus conhecimentos sobre a novel.</p>
                     <div class="grid-opcoes-quiz">
                         <div class="card-opcao">
                             <img src="/Trab2/imagens/conhecimento.jpg" alt="personagem">
                             <h3>Qual Personagem?</h3>
                             <p>Descubra quem você se parece no mundo de ORV.</p>
-                            <a href="#pagina-quiz" class="btn-pequeno">FAZER O QUIZ</a>
+                            <a href="/Trab2/quiz.html" class="btn pequeno">FAZER O QUIZ</a>
                         </div>
                         <div class="card-opcao">
                             <img src="/Trab2/imagens/conhecimento1.jpg" alt="Conhecimento">
                             <h3>Teste de Conhecimento</h3>
                             <p>Prove o quanto você sabe sobre a história e os personagens.</p>
-                            <a href="#pagina-quiz" class="btn-pequeno">COMEÇAR</a>
+                            <a href="/Trab2/quiz.html" class="btn pequeno">COMEÇAR</a>
                         </div>
                     </div>
                 </div>
@@ -94,8 +102,9 @@
 
                 <div class="item-grid secao-porque-ler">
                     <h2>POR QUE LER ORV?</h2>
-                    <p>A narrativa é cativante, com personagens moralmente ambíguos e um enredo único que vai te prender do início ao fim.</p>
-                    <button class="btn-saiba-mais">SAIBA MAIS</button>
+                    <p>A narrativa é cativante, com personagens moralmente ambíguos e um enredo único que vai te prender
+                        do início ao fim.</p>
+                    <button class="btn saiba-mais">SAIBA MAIS</button>
                 </div>
 
                 <div class="item-grid secao-galeria-imagens">
@@ -116,9 +125,51 @@
             <p>Desenvolvido para trabalho de Frontend por Giovana Fernandes Nascimento</p>
         </div>
     </footer>
-
     <script>
-        
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll suave para âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const cabecalho = document.querySelector('.cabecalho-principal');
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.navegacao-principal');
+
+            // Mostrar/ocultar menu ao clicar no botão hamburguer
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('ativo');
+            });
+
+            // Esconde o cabeçalho e fecha o menu ao rolar pra baixo
+            let ultimoScroll = 0;
+            window.addEventListener('scroll', () => {
+                const scrollAtual = window.scrollY;
+
+                if (window.innerWidth <= 1024) {
+                    if (scrollAtual > ultimoScroll && scrollAtual > 100) {
+                        // Rolar pra baixo
+                        cabecalho.classList.add('cabecalho-escondido');
+                        nav.classList.remove('ativo'); // Fecha o menu
+                    } else {
+                        // Rolar pra cima
+                        cabecalho.classList.remove('cabecalho-escondido');
+                    }
+                }
+
+                ultimoScroll = scrollAtual;
+            });
+        });
     </script>
+
+
+
 </body>
+
 </html>

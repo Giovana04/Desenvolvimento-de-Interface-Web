@@ -1,12 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORV</title>
-    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz ORV - Fanbase BR</title>
+    <link rel="stylesheet" href="styleFinal.css">
 </head>
+
 <body>
-    
+    <header class="cabecalho-principal">
+        <div class="container cabecalho-grid">
+            <div class="logo">
+                <img src="/Trab2/imagens/iconBranco.jpg" alt="LogoORV">
+                <span>Omniscient Reader's Viewpoint BR</span>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+
+            <nav class="navegacao-principal">
+                <ul>
+                    <li><a href="/Trab2/index.html">Início</a></li>
+                    <li><a href="/Trab2/quiz.html">Quiz</a></li>
+                    <li><a href="/Trab2/leitura.html">Por Que Ler?</a></li>
+                    <li><a href="/Trab2/leitura.html">Curiosidades</a></li>
+                </ul>
+            </nav>
+
+            <div class="busca-perfil">
+                <input type="text" placeholder="BUSCAR">
+            </div>
+        </div>
+    </header>
+
+
+    <main class="areas-conteudo">
+        <div class="container-quiz item-grid">
+            <h2>Quiz: O quanto você conhece ORV?</h2>
+            <form id="form-quiz">
+                <div class="pergunta" data-correta="dokja">
+                    <h3>1. Qual é o nome do protagonista de ORV?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q1" value="dokja"> Kim Dokja</label>
+                        <label><input type="radio" name="q1" value="jonghyuk"> Yoo Jonghyuk</label>
+                        <label><input type="radio" name="q1" value="sooyoung"> Han Sooyoung</label>
+                    </div>
+                </div>
+
+                <div class="pergunta" data-correta="habilidade">
+                    <h3>2. O que é o "Omniscient Reader's Viewpoint"?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q2" value="habilidade"> Uma habilidade especial</label>
+                        <label><input type="radio" name="q2" value="livro"> Um livro online</label>
+                        <label><input type="radio" name="q2" value="jogo"> Um jogo de sobrevivência</label>
+                    </div>
+                </div>
+
+                <div class="pergunta" data-correta="uriel">
+                    <h3>3. Qual constelação é obcecada pelo protagonista?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q3" value="uriel"> Uriel</label>
+                        <label><input type="radio" name="q3" value="orion"> Orion</label>
+                        <label><input type="radio" name="q3" value="gaia"> Gaia</label>
+                    </div>
+                </div>
+
+                <div class="pergunta" data-correta="narrador">
+                    <h3>4. O que significa "dokkaebi" no contexto de ORV?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="q4" value="narrador"> Narradores de cenários</label>
+                        <label><input type="radio" name="q4" value="monstro"> Monstros lendários</label>
+                        <label><input type="radio" name="q4" value="aliado"> Aliados fiéis</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primario">ENVIAR RESPOSTAS</button>
+                <p id="resultado-final" style="text-align: center; margin-top: 20px;"></p>
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container">
+            <p>&copy; 2025 Omniscient Reader's Viewpoint BR Fanbase.</p>
+            <p>Feito por Giovana Fernandes Nascimento</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('form-quiz').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const perguntas = document.querySelectorAll('.pergunta');
+            let acertos = 0;
+
+            perguntas.forEach((pergunta, i) => {
+                const correta = pergunta.dataset.correta;
+                const inputSelecionado = pergunta.querySelector('input[type="radio"]:checked');
+
+                if (inputSelecionado && inputSelecionado.value === correta) {
+                    acertos++;
+                }
+            });
+
+            const resultado = document.getElementById('resultado-final');
+            resultado.innerHTML = `Você acertou <strong>${acertos}</strong> de ${perguntas.length} perguntas.`;
+
+            if (acertos === perguntas.length) {
+                resultado.innerHTML += " Perfeito! Você é na verdade uma constelação! Ou talvez um leitor?";
+            } else if (acertos >= 2) {
+                resultado.innerHTML += " Mandou bem, mas dá pra melhorar!";
+            } else {
+                resultado.innerHTML += " Releia os capítulos... o Kim Dokja ficaria decepcionado.";
+            }
+        });
+
+
+        let ultimoScroll = 0;
+        const cabecalho = document.querySelector('.cabecalho-principal');
+        window.addEventListener('scroll', () => {
+            const scrollAtual = window.scrollY;
+            if (window.innerWidth <= 1024) {
+                if (scrollAtual > ultimoScroll && scrollAtual > 100) {
+                    cabecalho.classList.add('cabecalho-escondido');
+                } else {
+                    cabecalho.classList.remove('cabecalho-escondido');
+                }
+            }
+        });
+        ultimoScroll = scrollAtual;
+    </script>
 </body>
+
 </html>

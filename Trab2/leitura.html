@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORV</title>
-    <link rel="stylesheet" href="leitura.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+
+    <script>
+        let ultimoScroll = 0;
+        const cabecalho = document.querySelector('.cabecalho-principal');
+        window.addEventListener('scroll', () => {
+            const scrollAtual = window.scrollY;
+            if (window.innerWidth <= 1024) {
+                if (scrollAtual > ultimoScroll && scrollAtual > 100) {
+                    cabecalho.classList.add('cabecalho-escondido');
+                } else {
+                    cabecalho.classList.remove('cabecalho-escondido');
+                }
+            }
+        });
+        ultimoScroll = scrollAtual;
+    </script>
 </body>
+
 </html>
