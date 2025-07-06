@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz ORV - Fanbase BR</title>
     <link rel="stylesheet" href="styleFinal.css">
+    <script src="/Trab2/util.js"></script>
 </head>
 
 <body>
@@ -36,8 +37,27 @@
 
     <main class="areas-conteudo">
         <div class="container-quiz item-grid">
-            <h2>Quiz: O quanto você conhece ORV?</h2>
-            <form id="form-quiz">
+            <!-- Escolha inicial -->
+            <div id="escolha-quiz" class="item-grid secao-quiz quizin">
+                <div class="grid-opcoes-quiz">
+                    <div class="card-opcao" id="btn-conhecimento" tabindex="0">
+                        <img src="/Trab2/imagens/conhecimento.jpg" alt="Quiz de Conhecimento">
+                        <h3>Quiz de Conhecimento</h3>
+                        <p>Prove o quanto você sabe sobre a história e os personagens.</p>
+                        <button class="btn pequeno">COMEÇAR</button>
+                    </div>
+                    <div class="card-opcao" id="btn-personalidade" tabindex="0">
+                        <img src="/Trab2/imagens/conhecimento1.jpg" alt="Quiz de Personagem">
+                        <h3>Quiz de Personagem</h3>
+                        <p>Descubra quem você seria no mundo de ORV.</p>
+                        <button class="btn pequeno">FAZER O QUIZ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conhecimento -->
+            <form id="form-quiz" style="display:none;">
+                <h2>Quiz: O quanto você conhece ORV?</h2>
                 <div class="pergunta" data-correta="dokja">
                     <h3>1. Qual é o nome do protagonista de ORV?</h3>
                     <div class="opcoes">
@@ -46,7 +66,6 @@
                         <label><input type="radio" name="q1" value="sooyoung"> Han Sooyoung</label>
                     </div>
                 </div>
-
                 <div class="pergunta" data-correta="habilidade">
                     <h3>2. O que é o "Omniscient Reader's Viewpoint"?</h3>
                     <div class="opcoes">
@@ -55,7 +74,6 @@
                         <label><input type="radio" name="q2" value="jogo"> Um jogo de sobrevivência</label>
                     </div>
                 </div>
-
                 <div class="pergunta" data-correta="uriel">
                     <h3>3. Qual constelação é obcecada pelo protagonista?</h3>
                     <div class="opcoes">
@@ -64,7 +82,6 @@
                         <label><input type="radio" name="q3" value="gaia"> Gaia</label>
                     </div>
                 </div>
-
                 <div class="pergunta" data-correta="narrador">
                     <h3>4. O que significa "dokkaebi" no contexto de ORV?</h3>
                     <div class="opcoes">
@@ -73,11 +90,76 @@
                         <label><input type="radio" name="q4" value="aliado"> Aliados fiéis</label>
                     </div>
                 </div>
-
                 <button type="submit" class="btn primario">ENVIAR RESPOSTAS</button>
                 <p id="resultado-final" style="text-align: center; margin-top: 20px;"></p>
             </form>
 
+            <!-- Personalidade -->
+            <form id="form-quiz-personalidade" style="display:none;">
+                <h2>QUAL PERSONAGEM DE ORV VOCÊ SERIA?</h2>
+                <p class="intro-quiz">Descubra qual membro da Companhia do Kim Dokja reflete sua verdadeira
+                    personalidade neste mundo apocalíptico!</p>
+                <div class="pergunta">
+                    <h3>1. Em uma situação de crise, qual é sua primeira reação?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p1" value="dokja"> Analiso todas as informações e busco uma
+                            estratégia astuta.</label>
+                        <label><input type="radio" name="p1" value="jonghyuk"> Avanço sem hesitar, confiando em minhas
+                            habilidades de combate.</label>
+                        <label><input type="radio" name="p1" value="sooyoung"> Penso em como posso me beneficiar da
+                            situação, talvez enganando alguém.</label>
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <h3>2. Qual é o seu maior trunfo em um grupo?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p2" value="dokja"> Meu conhecimento e capacidade de prever o
+                            futuro.</label>
+                        <label><input type="radio" name="p2" value="jonghyuk"> Minha força de vontade e habilidade de
+                            liderança.</label>
+                        <label><input type="radio" name="p2" value="sooyoung"> Minha criatividade e habilidades de
+                            escrita/manipulação.</label>
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <h3>3. O que você valoriza mais em um companheiro?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p3" value="jonghyuk"> Lealdade e força para me acompanhar nos
+                            desafios.</label>
+                        <label><input type="radio" name="p3" value="dokja"> Compreensão e a capacidade de entender meus
+                            planos complexos.</label>
+                        <label><input type="radio" name="p3" value="gilyoung"> Companheirismo puro e inocência.</label>
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <h3>4. Qual tipo de leitura/entretenimento mais te atrai?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p4" value="dokja"> Novels complexas e cheias de
+                            reviravoltas.</label>
+                        <label><input type="radio" name="p4" value="sooyoung"> Histórias de sua própria autoria ou
+                            fanfics criativas.</label>
+                        <label><input type="radio" name="p4" value="jonghyuk"> Relatórios de missão e manuais de
+                            sobrevivência.</label>
+                    </div>
+                </div>
+                <div class="pergunta">
+                    <h3>5. Se você pudesse ter uma única habilidade de ORV, qual seria?</h3>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p5" value="dokja"> Ponto de Vista do Leitor Onisciente
+                            (Omniscient Reader's Viewpoint).</label>
+                        <label><input type="radio" name="p5" value="jonghyuk"> Retorno (Regression).</label>
+                        <label><input type="radio" name="p5" value="sooyoung"> Duplicação (Lie Detection ou Fourth
+                            Wall).</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn">VER MEU PERSONAGEM</button>
+                <div id="resultado-personalidade" class="resultado-quiz" style="display: none;">
+                    <h3>Você é... <span id="nome-personagem"></span>!</h3>
+                    <p id="descricao-personagem"></p>
+                    <img id="imagem-personagem" src="" alt="Seu Personagem"
+                        style="max-width: 150px; border-radius: 8px; margin-top: 15px;">
+                </div>
+            </form>
         </div>
     </main>
 
@@ -89,48 +171,126 @@
     </footer>
 
     <script>
-        document.getElementById('form-quiz').addEventListener('submit', function (e) {
-            e.preventDefault();
 
-            const perguntas = document.querySelectorAll('.pergunta');
-            let acertos = 0;
+        document.addEventListener("DOMContentLoaded", () => { 
+            inicializarFuncoesGlobais();
+        });
 
-            perguntas.forEach((pergunta, i) => {
-                const correta = pergunta.dataset.correta;
-                const inputSelecionado = pergunta.querySelector('input[type="radio"]:checked');
 
-                if (inputSelecionado && inputSelecionado.value === correta) {
-                    acertos++;
+        document.addEventListener("DOMContentLoaded", () => {
+            const escolhaQuiz = document.getElementById('escolha-quiz');
+            const formConhecimento = document.getElementById('form-quiz');
+            const formPersonalidade = document.getElementById('form-quiz-personalidade');
+            const btnConhecimento = document.getElementById('btn-conhecimento');
+            const btnPersonalidade = document.getElementById('btn-personalidade');
+            const resultado = document.getElementById('resultado-final');
+
+            const resultadoPersonagem = document.getElementById('resultado-personalidade');
+            const nomePersonagem = document.getElementById('nome-personagem');
+            const descricaoPersonagem = document.getElementById('descricao-personagem');
+            const imagemPersonagem = document.getElementById('imagem-personagem');
+
+            btnConhecimento.addEventListener('click', (e) => {
+                e.preventDefault();
+                escolhaQuiz.style.display = 'none';
+                formConhecimento.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            btnPersonalidade.addEventListener('click', (e) => {
+                e.preventDefault();
+                escolhaQuiz.style.display = 'none';
+                formPersonalidade.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Quiz de Conhecimento
+            formConhecimento.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let acertos = 0;
+                const perguntas = formConhecimento.querySelectorAll('.pergunta');
+
+                perguntas.forEach(pergunta => {
+                    const correta = pergunta.dataset.correta;
+                    const selecionada = pergunta.querySelector('input:checked');
+                    if (selecionada && selecionada.value === correta) {
+                        acertos++;
+                    }
+                });
+
+                resultado.innerHTML = `Você acertou <strong>${acertos}</strong> de ${perguntas.length} perguntas.`;
+
+                if (acertos === perguntas.length) {
+                    resultado.innerHTML += " Perfeito! Você é na verdade uma constelação! Ou talvez um leitor?";
+                } else if (acertos >= 2) {
+                    resultado.innerHTML += " Mandou bem, mas dá pra melhorar!";
+                } else {
+                    resultado.innerHTML += " Releia os capítulos... o Kim Dokja ficaria decepcionado.";
                 }
             });
 
-            const resultado = document.getElementById('resultado-final');
-            resultado.innerHTML = `Você acertou <strong>${acertos}</strong> de ${perguntas.length} perguntas.`;
+            // Quiz de Personalidade (resposta aleatória)
+            formPersonalidade.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-            if (acertos === perguntas.length) {
-                resultado.innerHTML += " Perfeito! Você é na verdade uma constelação! Ou talvez um leitor?";
-            } else if (acertos >= 2) {
-                resultado.innerHTML += " Mandou bem, mas dá pra melhorar!";
-            } else {
-                resultado.innerHTML += " Releia os capítulos... o Kim Dokja ficaria decepcionado.";
-            }
-        });
+                const perguntas = formPersonalidade.querySelectorAll('.pergunta');
+                let perguntaNaoRespondida = null;
 
+                perguntas.forEach(pergunta => {
+                    const selecionada = pergunta.querySelector('input:checked');
+                    if (!selecionada && !perguntaNaoRespondida) {
+                        perguntaNaoRespondida = pergunta;
+                    }
+                });
 
-        let ultimoScroll = 0;
-        const cabecalho = document.querySelector('.cabecalho-principal');
-        window.addEventListener('scroll', () => {
-            const scrollAtual = window.scrollY;
-            if (window.innerWidth <= 1024) {
-                if (scrollAtual > ultimoScroll && scrollAtual > 100) {
-                    cabecalho.classList.add('cabecalho-escondido');
-                } else {
-                    cabecalho.classList.remove('cabecalho-escondido');
+                if (perguntaNaoRespondida) {
+                    mostrarToast("Você precisa responder todas as perguntas!");
+                    perguntaNaoRespondida.scrollIntoView({ behavior: 'smooth' });
+                    return;
                 }
-            }
+
+                const opcoesPersonagem = [
+                    {
+                        nome: "Kim Dokja",
+                        descricao: "Você é estrategista, calmo e sempre dois passos à frente. Mestre dos bastidores!",
+                        imagem: "/Trab2/imagens/KimDokja.avif"
+                    },
+                    {
+                        nome: "Yoo Jonghyuk",
+                        descricao: "Você resolve tudo no soco e não tem paciência pra enrolação. Honra acima de tudo!",
+                        imagem: "/Trab2/imagens/YooJon.jpg"
+                    },
+                    {
+                        nome: "Han Sooyoung",
+                        descricao: "Sarcasmo, inteligência e caos: tudo junto e misturado. Rainha da manipulação criativa!",
+                        imagem: "/Trab2/imagens/HanSoo.jpg"
+                    },
+                    {
+                        nome: "Lee Gilyoung",
+                        descricao: "Coração puro, vibe tranquila, e amigo das criaturinhas. Protejam esse neném!",
+                        imagem: "/Trab2/imagens/LeeGil.jpg"
+                    },
+                    {
+                        nome: "Uriel",
+                        descricao: "Você é a constelação que observa tudo, sempre pronta para ajudar. Sua luz guia os perdidos!",
+                        imagem: "/Trab2/imagens/Uriel.png"
+                    }
+                ];
+
+                const sorteio = Math.floor(Math.random() * opcoesPersonagem.length);
+                const personagem = opcoesPersonagem[sorteio];
+
+                nomePersonagem.textContent = personagem.nome;
+                descricaoPersonagem.textContent = personagem.descricao;
+                imagemPersonagem.src = personagem.imagem;
+
+                resultadoPersonagem.style.display = 'block';
+                resultadoPersonagem.scrollIntoView({ behavior: 'smooth' });
+            });
         });
-        ultimoScroll = scrollAtual;
     </script>
+
+
 </body>
 
 </html>

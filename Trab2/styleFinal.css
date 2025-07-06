@@ -342,7 +342,7 @@ a:hover {
     background-color: var(--fundo-cabecalho-rodape);
     color: var(--texto-medio);
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 1rem 0;
     border-top: 0.1rem solid var(--borda);
     font-size: 0.9em;
 }
@@ -351,6 +351,10 @@ a:hover {
 
 /*<------------------------------------QUIZ------------------------------------>*/
 
+.item-grid.secao-quiz.quizin {
+    border: none;
+}
+
 .container-quiz {
     width: 100%;
     max-width: 1200px;
@@ -358,7 +362,6 @@ a:hover {
     padding: 2.2em 2.2em;
     box-sizing: border-box;
 }
-
 
 .pergunta {
     margin-bottom: 3.5rem;
@@ -377,8 +380,7 @@ a:hover {
 
 .opcoes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* empilha as opções */
     gap: 1.2rem;
 }
 
@@ -392,6 +394,9 @@ a:hover {
     transition: background-color 0.3s ease;
     text-align: center;
     min-width: 20rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: start;
 }
 
 input[type="radio"] {
@@ -407,6 +412,7 @@ input[type="radio"] {
 
 
 /* ------------------------RESPONSIVIDADE----------------------- */
+
 @media screen and (max-width: 768px) {
     .cabecalho-grid {
         display: flex;
@@ -455,8 +461,9 @@ input[type="radio"] {
         width: 90%;
         max-width: 22rem;
     }
-}
 
+
+}
 
 @media screen and (min-width: 1024px) {
     .cabecalho-grid {
@@ -523,4 +530,5 @@ input[type="radio"] {
     .titulo-central h1 {
         font-size: 5.5em;
     }
+
 }
