@@ -9,7 +9,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <script src="/Trab2/util.js"></script>
 </head>
 
 <body>
@@ -27,12 +26,12 @@
                     <li><a href="/Trab2/index.html">Início</a></li>
                     <li><a href="/Trab2/quiz.html">Quiz</a></li>
                     <li><a href="/Trab2/leitura.html">Por Que Ler?</a></li>
-                    <li><a href="/Trab2/leitura.html">Curiosidades</a></li>
+                    <li><a href="/Trab2/leitura.html#curiosidades">Curiosidades</a></li>
                 </ul>
             </nav>
 
             <div class="busca-perfil">
-                <input type="text" placeholder="BUSCAR">
+                <input type="text" id="input-busca" placeholder="BUSCAR">
             </div>
         </div>
     </header>
@@ -126,15 +125,29 @@
         </div>
     </footer>
 
+    <div id="aviso-toast" class="toast-escondido"></div>
+    
+    <script src="/Trab2/util.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             inicializarFuncoesGlobais();
+
+            const inputBusca = document.getElementById("input-busca");
+
+            inputBusca.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const termo = inputBusca.value.trim();
+                    if (termo) {
+                        mostrarAviso(`Você pesquisou: "${termo}"`);
+                    } else {
+                        mostrarAviso("Digite algo para buscar!");
+                    }
+                }
+            });
         });
-
     </script>
-
-
-
 </body>
 
 </html>

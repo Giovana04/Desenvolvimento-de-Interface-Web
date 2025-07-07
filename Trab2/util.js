@@ -1,3 +1,15 @@
+function mostrarAviso(msg, tempo = 3000) {
+    const aviso = document.getElementById('aviso-toast');
+    aviso.textContent = msg;
+    aviso.classList.remove('toast-escondido');
+    aviso.classList.add('toast-visivel');
+
+    setTimeout(() => {
+        aviso.classList.remove('toast-visivel');
+        aviso.classList.add('toast-escondido');
+    }, tempo);
+}
+
 function aplicarScrollSuave() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

@@ -25,33 +25,33 @@
                     <li><a href="/Trab2/index.html">Início</a></li>
                     <li><a href="/Trab2/quiz.html">Quiz</a></li>
                     <li><a href="/Trab2/leitura.html">Por Que Ler?</a></li>
-                    <li><a href="/Trab2/leitura.html">Curiosidades</a></li>
+                    <li><a href="/Trab2/leitura.html#curiosidades">Curiosidades</a></li>
                 </ul>
             </nav>
             <div class="busca-perfil">
-                <input type="text" placeholder="BUSCAR">
+                <input type="text" id="input-busca" placeholder="BUSCAR">
             </div>
         </div>
     </header>
 
     <main>
         <section class="areas-conteudo">
-            <div class="container grid-principal">
+            <div class="container grid-principal secao-leitura">
                 <div class="item-grid secao-porque-ler">
                     <h2>POR QUE LER ORV?</h2>
-                    <img src="/Trab2/imagens/cena-leitura.jpg" alt="Kim Dokja lendo a novel" class="img-destaque">
+                    <img src="imagens/novel3.jpg" alt="Novel" class="img-destaque">
                     <p>Omniscient Reader's Viewpoint (ORV), ou "Leitor Onisciente", não é apenas mais uma história sobre o fim do mundo. É uma jornada épica que redefine o significado de narrativa, explorando a relação entre o leitor, o protagonista e o autor de maneiras surpreendentes. Se você busca uma obra com profundidade, aqui estão alguns motivos para mergulhar de cabeça:</p>
                     <ul class="motivos-lista">
                         <li><strong>Uma Premissa Única:</strong> Imagine que o mundo se transforma no universo do seu livro favorito, e só você conhece o enredo completo. Essa é a realidade de Kim Dokja. A forma como ele usa seu conhecimento para subverter a história original e salvar as pessoas que ama é o motor de uma trama cheia de reviravoltas e estratégias geniais.</li>
                         <li><strong>Personagens Inesquecíveis:</strong> Longe de heróis perfeitos, os personagens de ORV são complexos, cheios de falhas e moralmente ambíguos. Desde o calculista, mas altruísta, Kim Dokja, até o protagonista original e eternamente regressor, Yoo Jonghyuk, cada personagem tem suas próprias motivações e um desenvolvimento cativante.</li>
-                        <li><strong>World-Building Grandioso:</strong> A história constrói um universo fascinante onde mitologias de todo o mundo — coreana, grega, nórdica, bíblica — se tornam reais. As "Constelações" (seres históricos e míticos) assistem e patrocinam os humanos, criando um sistema de poder complexo e original.</li>
+                        <li><strong>World-Building Grandioso:</strong> A história constrói um universo fascinante onde mitologias de todo o mundo se tornam reais. As "Constelações" (seres históricos e míticos) assistem e patrocinam os humanos, criando um sistema de poder complexo e original.</li>
                         <li><strong>Uma Carta de Amor à Leitura:</strong> No seu cerne, ORV é uma homenagem a todas as histórias que já lemos e aos mundos que elas nos permitiram habitar. A obra explora temas como destino, livre-arbítrio e o poder que uma história tem de mudar a realidade e, mais importante, de nos salvar.</li>
                     </ul>
                 </div>
 
-                <div class="item-grid secao-curiosidades">
+                <div id="curiosidades" class="item-grid secao-curiosidades">
                     <h2>CURIOSIDADES DO UNIVERSO ORV</h2>
-                    <img src="/Trab2/imagens/star-stream.jpg" alt="O Star Stream" class="img-destaque">
+                    <img src="imagens/ler3.webp" alt="Lendo" class="img-destaque">
                     <ul class="curiosidades-lista">
                         <li><strong>Autoria Misteriosa:</strong> "Sing Shong" (싱숑) não é uma pessoa, mas sim o pseudônimo de um casal de autores (marido e mulher) que escreveram a novel juntos. Eles mantêm suas identidades em segredo até hoje.</li>
                         <li><strong>Sucesso Absoluto:</strong> A webnovel original foi serializada na plataforma coreana Munpia e concluída com 551 capítulos. Seu sucesso foi estrondoso, gerando um dos fandoms mais dedicados e apaixonados da Coreia do Sul e, posteriormente, do mundo.</li>
@@ -72,9 +72,27 @@
         </div>
     </footer>
 
+    <div id="aviso-toast" class="toast-escondido"></div>
+    
+    <script src="/Trab2/util.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             inicializarFuncoesGlobais();
+
+            const inputBusca = document.getElementById("input-busca");
+
+            inputBusca.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    const termo = inputBusca.value.trim();
+                    if (termo) {
+                        mostrarAviso(`Você pesquisou: "${termo}"`);
+                    } else {
+                        mostrarAviso("Digite algo para buscar!");
+                    }
+                }
+            });
         });
     </script>
 </body>
